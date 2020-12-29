@@ -1,8 +1,8 @@
-# @codemirror/fold
+# @codemirror/fold [![NPM version](https://img.shields.io/npm/v/@codemirror/fold.svg)](https://www.npmjs.org/package/@codemirror/fold)
 
-[ [![NPM version](https://img.shields.io/npm/v/@codemirror/next.svg)](https://www.npmjs.org/package/@codemirror/fold) | [**WEBSITE**](https://codemirror.net/6/) | [**DOCS**](https://codemirror.net/6/docs/ref/#fold) | [**ISSUES**](https://github.com/codemirror/codemirror.next/issues) | [**FORUM**](https://discuss.codemirror.net/c/next/) | [**CHANGELOG**](https://github.com/codemirror/fold/blob/main/CHANGELOG.md) ]
+[ [**WEBSITE**](https://codemirror.net/6/) | [**DOCS**](https://codemirror.net/6/docs/ref/#fold) | [**ISSUES**](https://github.com/codemirror/codemirror.next/issues) | [**FORUM**](https://discuss.codemirror.net/c/next/) | [**CHANGELOG**](https://github.com/codemirror/fold/blob/main/CHANGELOG.md) ]
 
-This package implements Code folding for the
+This package implements code folding for the
 [CodeMirror](https://codemirror.net/6/) code editor.
 
 The [project page](https://codemirror.net/6/) has more information, a
