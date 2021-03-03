@@ -1,3 +1,9 @@
+## 0.18.0 (2021-03-03)
+
+### Bug fixes
+
+Adds a screen reader announcement when code is folded or unfolded.
+
 ## 0.17.1 (2021-01-06)
 
 ### New features

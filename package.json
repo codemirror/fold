@@ -1,6 +1,6 @@
 {
   "name": "@codemirror/fold",
-  "version": "0.17.1",
+  "version": "0.18.0",
   "description": "Code folding for the CodeMirror code editor",
   "scripts": {
     "test": "echo 'No tests'",
@@ -26,11 +26,11 @@
   "sideEffects": false,
   "license": "MIT",
   "dependencies": {
-    "@codemirror/gutter": "^0.17.0",
-    "@codemirror/language": "^0.17.0",
-    "@codemirror/rangeset": "^0.17.0",
-    "@codemirror/state": "^0.17.0",
-    "@codemirror/view": "^0.17.7"
+    "@codemirror/gutter": "^0.18.0",
+    "@codemirror/language": "^0.18.0",
+    "@codemirror/rangeset": "^0.18.0",
+    "@codemirror/state": "^0.18.0",
+    "@codemirror/view": "^0.18.0"
   },
   "devDependencies": {
     "rollup": "^2.35.1",
