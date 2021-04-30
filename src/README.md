@@ -14,3 +14,12 @@ folding (temporarily hiding pieces of code).
 @codeFolding
 
 @foldGutter
+
+The following functions provide more direct, low-level control over
+the fold state.
+
+@foldedRanges
+
+@foldEffect
+
+@unfoldEffect
