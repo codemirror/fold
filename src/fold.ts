@@ -197,17 +197,35 @@ const foldWidget = Decoration.replace({widget: new class extends WidgetType {
 }})
 
 interface FoldGutterConfig {
-  /// Text used to indicate that a given line can be folded. Defaults
-  /// to `"⌄"`.
-  openText?: string
-  /// Text used to indicate that a given line is folded. Defaults to
-  /// `"›"`.
-  closedText?: string
+  /// A function that creates the DOM element used to indicate a
+  /// given line can be folded. 
+  /// When not given, the `openText` option will be used instead.
+  openDOM?: (() => HTMLElement) | null,
+  /// A function that creates the DOM element used to indicate a
+  /// given line is folded. 
+  /// When not given, the `closedText` option will be used instead.
+  closedDOM?: (() => HTMLElement) | null,
+  /// Text used to indicate that a given line can be folded. 
+  /// Defaults to `"⌄"`.
+  openText?: string,
+  /// Text used to indicate that a given line is folded. 
+  /// Defaults to `"›"`.
+  closedText?: string,
+  /// Text used to provide extra open information. 
+  /// Defaults to `"Fold line"`.
+  openTitle?: string | null,
+  /// Text used to provide extra closed information. 
+  /// Defaults to `"Unfold line"`.
+  closedTitle?: string | null,
 }
 
 const foldGutterDefaults: Required<FoldGutterConfig> = {
   openText: "⌄",
-  closedText: "›"
+  closedText: "›",
+  openDOM: null,
+  closedDOM: null,
+  openTitle: "Fold line",
+  closedTitle: "Unfold line"
 }
 
 class FoldMarker extends GutterMarker {
@@ -217,9 +235,13 @@ class FoldMarker extends GutterMarker {
   eq(other: FoldMarker) { return this.config == other.config && this.open == other.open }
 
   toDOM(view: EditorView) {
+    if (this.open && this.config.openDOM) return this.config.openDOM()
+    else if (!this.open && this.config.closedDOM) return this.config.closedDOM()
+
     let span = document.createElement("span")
     span.textContent = this.open ? this.config.openText : this.config.closedText
-    span.title = view.state.phrase(this.open ? "Fold line" : "Unfold line")
+    if (this.open && this.config.openTitle) span.title = view.state.phrase(this.config.openTitle)
+    else if (!this.open && this.config.closedTitle) span.title = view.state.phrase(this.config.closedTitle)
     return span
   }
 }
