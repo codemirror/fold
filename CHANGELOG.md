@@ -1,3 +1,9 @@
+## 0.18.2 (2021-08-07)
+
+### New features
+
+The fold gutter now accepts a `markerDOM` option, which can be used to override the way gutter markers are rendered. Fix typo issue
+
 ## 0.18.1 (2021-04-30)
 
 ### Bug fixes
