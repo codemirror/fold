@@ -152,7 +152,7 @@ interface FoldConfig {
   /// A function that creates the DOM element used to indicate the
   /// position of folded code. When not given, the `placeholderText`
   /// option will be used instead.
-  placeholderDOM?: (() => HTMLElement) | null,
+  placeholderDOM?: ((view: EditorView) => HTMLElement) | null,
   /// Text to use as placeholder for folded text. Defaults to `"…"`.
   /// Will be styled with the `"cm-foldPlaceholder"` class.
   placeholderText?: string
@@ -179,7 +179,7 @@ const foldWidget = Decoration.replace({widget: new class extends WidgetType {
 
   toDOM(view: EditorView) {
     let {state} = view, conf = state.facet(foldConfig)
-    if (conf.placeholderDOM) return conf.placeholderDOM()
+    if (conf.placeholderDOM) return conf.placeholderDOM(view)
     let element = document.createElement("span")
     element.textContent = conf.placeholderText
     element.setAttribute("aria-label", state.phrase("folded code"))
