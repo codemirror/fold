@@ -1,3 +1,9 @@
+## 0.19.1 (2021-10-25)
+
+### New features
+
+The `placeholderDOM` option now gets the view and an event handler function as arguments.
+
 ## 0.19.0 (2021-08-11)
 
 ### Breaking changes
