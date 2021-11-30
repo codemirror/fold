@@ -1,6 +1,6 @@
 {
   "name": "@codemirror/fold",
-  "version": "0.19.1",
+  "version": "0.19.2",
   "description": "Code folding for the CodeMirror code editor",
   "scripts": {
     "test": "cm-runtests",

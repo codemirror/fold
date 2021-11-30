@@ -1,3 +1,9 @@
+## 0.19.2 (2021-11-30)
+
+### Bug fixes
+
+Use more efficient line iteration in fold gutter.
+
 ## 0.19.1 (2021-10-25)
 
 ### New features
