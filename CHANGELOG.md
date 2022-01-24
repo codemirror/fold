@@ -1,3 +1,9 @@
+## 0.19.3 (2022-01-24)
+
+### New features
+
+`foldGutter` now takes a `domEventHandlers` option to register additional event handlers for the gutter.
+
 ## 0.19.2 (2021-11-30)
 
 ### Bug fixes
