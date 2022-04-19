@@ -1,3 +1,9 @@
+## 0.19.4 (2022-04-19)
+
+### Bug fixes
+
+Make sure the fold gutter is updated when the syntax tree changes.
+
 ## 0.19.3 (2022-01-24)
 
 ### New features
